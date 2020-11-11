@@ -42,10 +42,6 @@ int main(int argc, char* argv[]){
                 
             }
         }
-        else{
-                cout << "incorrect operation222222";
-                return EXIT_FAILURE;
-            }
 
             if(strcmp(argv[2] , "+" ) == 0){
             char *Eptr;
@@ -67,10 +63,11 @@ int main(int argc, char* argv[]){
                 
             }
         }
-        else{
-                cout << "incorrect operation33333333";
-                return EXIT_FAILURE;
-            }
+        if (strcmp(argv[2] , "+" ) != 0 && strcmp(argv[2] , "x" ) != 0){
+            cout << "incorrect argument";
+            return EXIT_FAILURE;
+
+        }
         }
             return 0;
     }

@@ -17,8 +17,8 @@ int Matrix::fill_from_file(char *path){
     string line;
 
     if (!infile){
-        cout << "file doesn't exist";
-        Return EXIT_FAILURE
+        cout << "file doesn't exist"<< "\n";
+        return EXIT_FAILURE;
     }
     else{
 
@@ -72,6 +72,7 @@ int Matrix::columns(){                      //returns columns
 }
 
 int Matrix::store_in_file(char *path){
+
     
     ofstream outfile(path);
     ostream_iterator<int> output_iterator(outfile, " ");
